@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chính sách bảo mật ứng dụng Sổ Lịch Âm Việt - Privacy Policy" />
+  <title>Chính Sách Bảo Mật – Sổ Lịch Âm Việt</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:   #C8972A;
+      --gold-lt:#E8B84B;
+      --red:    #C0392B;
+      --bg:     #1A0F00;
+      --bg2:    #261500;
+      --card:   #2D1A00;
+      --border: rgba(200,151,42,.25);
+      --text:   #F0E6D3;
+      --muted:  #A08060;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--bg2) 0%, #3A1F00 100%);
+      border-bottom: 2px solid var(--gold);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(200,151,42,.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .app-icon {
+      font-size: 56px;
+      display: block;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 0 16px rgba(200,151,42,.5));
+    }
+    header h1 {
+      font-size: clamp(22px, 5vw, 34px);
+      font-weight: 800;
+      color: var(--gold-lt);
+      letter-spacing: 1px;
+    }
+    header p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 5px 16px;
+      border: 1px solid var(--gold);
+      border-radius: 20px;
+      font-size: 12px;
+      color: var(--gold-lt);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* ── LANG SWITCH ── */
+    .lang-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+    }
+    .lang-btn {
+      padding: 6px 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--gold);
+      color: #1A0F00;
+      border-color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(to bottom, var(--gold), var(--red));
+      border-radius: 4px 0 0 4px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .section-icon {
+      font-size: 24px;
+      line-height: 1;
+    }
+    .section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--gold-lt);
+    }
+    .section p, .section li {
+      font-size: 14.5px;
+      color: var(--text);
+      opacity: .88;
+    }
+    .section ul, .section ol {
+      padding-left: 20px;
+    }
+    .section li { margin-top: 6px; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight {
+      background: rgba(200,151,42,.08);
+      border: 1px solid rgba(200,151,42,.3);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--gold-lt);
+    }
+    .highlight strong { color: #fff; }
+
+    /* ── TABLE ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 13.5px;
+    }
+    th {
+      background: rgba(200,151,42,.15);
+      color: var(--gold-lt);
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      border: 1px solid var(--border);
+    }
+    td {
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      opacity: .85;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: rgba(255,255,255,.03); }
+
+    /* ── CONTACT ── */
+    .contact-box {
+      text-align: center;
+      padding: 32px;
+    }
+    .contact-box a {
+      color: var(--gold-lt);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px dashed var(--gold);
+    }
+    .contact-box a:hover { color: #fff; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ── LANG TOGGLE ── */
+    .vi-content { display: block; }
+    .en-content  { display: none; }
+    body.lang-en .vi-content { display: none; }
+    body.lang-en .en-content { display: block; }
+
+    @media (max-width: 600px) {
+      .section { padding: 20px 18px; }
+      header { padding: 36px 16px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <span class="app-icon">📅</span>
+  <h1>Sổ Lịch Âm Việt</h1>
+  <p>Privacy Policy &nbsp;/&nbsp; Chính Sách Bảo Mật</p>
+  <span class="badge">Official Policy</span>
+</header>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('vi', this)">🇻🇳 Tiếng Việt</button>
+  <button class="lang-btn"       onclick="setLang('en', this)">🇬🇧 English</button>
+</div>
+
+<main>
+
+  <!-- ════════════ VIETNAMESE ════════════ -->
+
+  <div class="vi-content">
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">📋</span>
+        <h2>Tổng Quan</h2>
+      </div>
+      <p>
+        Chính sách bảo mật này mô tả cách ứng dụng <strong>Sổ Lịch Âm Việt</strong>
+        ("ứng dụng", "chúng tôi") xử lý thông tin khi bạn sử dụng ứng dụng di động của chúng tôi.
+        Chúng tôi cam kết bảo vệ quyền riêng tư của bạn.
+      </p>
+      <div class="highlight">
+        <strong>Tóm tắt nhanh:</strong> Ứng dụng hoạt động hoàn toàn ngoại tuyến (offline).
+        Chúng tôi <strong>không thu thập, không lưu trữ trên máy chủ và không chia sẻ</strong>
+        bất kỳ thông tin cá nhân nào của bạn với bên thứ ba.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🔍</span>
+        <h2>Thông Tin Chúng Tôi Thu Thập</h2>
+      </div>
+      <p>Ứng dụng <strong>không thu thập bất kỳ thông tin cá nhân nào</strong> như tên, địa chỉ email, số điện thoại, vị trí địa lý, hay dữ liệu nhận dạng cá nhân khác.</p>
+      <p style="margin-top:12px">Dữ liệu duy nhất được lưu trữ là các sự kiện/nhắc nhở mà <strong>bạn tự tạo ra</strong> (ví dụ: ngày giỗ, cỗ bàn, sinh nhật). Dữ liệu này được lưu cục bộ trên thiết bị của bạn bằng SharedPreferences và <strong>không bao giờ rời khỏi thiết bị</strong>.</p>
+
+      <table>
+        <thead>
+          <tr><th>Loại dữ liệu</th><th>Nơi lưu trữ</th><th>Chia sẻ bên ngoài?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sự kiện người dùng tạo (tên, ngày, loại)</td><td>Thiết bị cục bộ</td><td>❌ Không</td></tr>
+          <tr><td>Cài đặt ứng dụng</td><td>Thiết bị cục bộ</td><td>❌ Không</td></tr>
+          <tr><td>Dữ liệu cá nhân (email, điện thoại…)</td><td>Không thu thập</td><td>❌ Không</td></tr>
+          <tr><td>Dữ liệu vị trí</td><td>Không thu thập</td><td>❌ Không</td></tr>
+          <tr><td>Analytics / theo dõi hành vi</td><td>Không thu thập</td><td>❌ Không</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">⚙️</span>
+        <h2>Cách Ứng Dụng Sử Dụng Dữ Liệu</h2>
+      </div>
+      <p>Dữ liệu sự kiện bạn nhập vào chỉ được sử dụng để:</p>
+      <ul>
+        <li>Hiển thị trên màn hình lịch và danh sách sự kiện của bạn.</li>
+        <li>Tính toán và hiển thị các ngày âm lịch, can chi tương ứng.</li>
+        <li>Nhắc nhở bạn về các sự kiện sắp tới (nếu có chức năng thông báo).</li>
+      </ul>
+      <p style="margin-top:12px">Chúng tôi không sử dụng dữ liệu cho mục đích quảng cáo, phân tích, hoặc bất kỳ mục đích thương mại nào khác.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🌐</span>
+        <h2>Quyền Truy Cập Thiết Bị</h2>
+      </div>
+      <p>Ứng dụng <strong>không yêu cầu</strong> các quyền nhạy cảm như: camera, microphone, danh bạ, vị trí GPS, bộ nhớ ngoài, hay SMS.</p>
+      <p style="margin-top:10px">Quyền duy nhất có thể được yêu cầu là <strong>Thông báo (Notification)</strong> — chỉ để gửi nhắc nhở sự kiện mà bạn đã đặt. Bạn có thể từ chối quyền này bất kỳ lúc nào trong phần Cài đặt thiết bị.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🔗</span>
+        <h2>Dịch Vụ Bên Thứ Ba</h2>
+      </div>
+      <p>Ứng dụng <strong>không tích hợp SDK quảng cáo, không sử dụng dịch vụ phân tích</strong> (analytics) bên thứ ba như Firebase Analytics, Crashlytics, Facebook SDK, AdMob hay bất kỳ dịch vụ theo dõi nào khác.</p>
+      <p style="margin-top:10px">Ứng dụng hoạt động hoàn toàn offline, không gửi bất kỳ yêu cầu mạng nào đến máy chủ bên ngoài.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">👶</span>
+        <h2>Quyền Riêng Tư Trẻ Em</h2>
+      </div>
+      <p>
+        Ứng dụng <strong>Sổ Lịch Âm Việt</strong> phù hợp với mọi lứa tuổi và không thu thập
+        thông tin cá nhân của bất kỳ ai, bao gồm cả trẻ em dưới 13 tuổi.
+        Chúng tôi tuân thủ đầy đủ các quy định về bảo vệ dữ liệu trẻ em (COPPA).
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🗑️</span>
+        <h2>Xóa Dữ Liệu</h2>
+      </div>
+      <p>Vì toàn bộ dữ liệu được lưu cục bộ trên thiết bị, bạn có thể xóa hoàn toàn dữ liệu bằng cách:</p>
+      <ul>
+        <li>Xóa từng sự kiện trong ứng dụng (vuốt sang trái để xóa).</li>
+        <li>Vào <strong>Cài đặt &gt; Ứng dụng &gt; Sổ Lịch Âm Việt &gt; Xóa dữ liệu</strong> trên thiết bị Android.</li>
+        <li>Gỡ cài đặt ứng dụng — toàn bộ dữ liệu sẽ bị xóa vĩnh viễn.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">📝</span>
+        <h2>Thay Đổi Chính Sách</h2>
+      </div>
+      <p>
+        Chúng tôi có thể cập nhật Chính sách bảo mật này theo thời gian.
+        Mọi thay đổi sẽ được đăng tải tại trang này với ngày hiệu lực mới.
+        Việc tiếp tục sử dụng ứng dụng sau khi thay đổi đồng nghĩa với việc bạn chấp nhận chính sách mới.
+      </p>
+      <p style="margin-top:10px;color:var(--muted);font-size:13px">
+        Ngày hiệu lực: <strong style="color:var(--gold-lt)">01 tháng 03 năm 2026</strong>
+      </p>
+    </div>
+
+    <div class="section contact-box">
+      <div class="section-header" style="justify-content:center">
+        <span class="section-icon">📧</span>
+        <h2>Liên Hệ</h2>
+      </div>
+      <p style="text-align:center">Nếu bạn có bất kỳ câu hỏi nào về Chính sách bảo mật này, vui lòng liên hệ:</p>
+      <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px;align-items:center">
+        <p>📍 &nbsp;Nhà liền kề TT03-15 Dự án Hải Đăng City, Đường Nguyễn Cơ Thạch,<br>Phường Mỹ Đình 2, Quận Nam Từ Liêm, TP Hà Nội</p>
+        <p>📞 &nbsp;<a href="tel:+84589212654">+84 589 212 654</a></p>
+        <p>📧 &nbsp;<a href="mailto:phucloc2010pl@gmail.com">phucloc2010pl@gmail.com</a></p>
+      </div>
+    </div>
+
+  </div><!-- /vi-content -->
+
+
+  <!-- ════════════ ENGLISH ════════════ -->
+
+  <div class="en-content">
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">📋</span>
+        <h2>Overview</h2>
+      </div>
+      <p>
+        This Privacy Policy describes how <strong>Sổ Lịch Âm Việt</strong>
+        ("the App", "we", "us") handles information when you use our mobile application.
+        We are committed to protecting your privacy.
+      </p>
+      <div class="highlight">
+        <strong>Quick summary:</strong> The App works entirely offline.
+        We <strong>do not collect, store on servers, or share</strong>
+        any personal information with third parties.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🔍</span>
+        <h2>Information We Collect</h2>
+      </div>
+      <p>The App <strong>does not collect any personal information</strong> such as name, email address, phone number, geographic location, or other personal identifiers.</p>
+      <p style="margin-top:12px">The only data stored is the events/reminders that <strong>you create yourself</strong> (e.g. death anniversaries, gatherings, birthdays). This data is stored locally on your device using SharedPreferences and <strong>never leaves your device</strong>.</p>
+
+      <table>
+        <thead>
+          <tr><th>Data Type</th><th>Storage Location</th><th>Shared Externally?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>User-created events (name, date, type)</td><td>Local device</td><td>❌ No</td></tr>
+          <tr><td>App settings</td><td>Local device</td><td>❌ No</td></tr>
+          <tr><td>Personal data (email, phone…)</td><td>Not collected</td><td>❌ No</td></tr>
+          <tr><td>Location data</td><td>Not collected</td><td>❌ No</td></tr>
+          <tr><td>Analytics / behavioral tracking</td><td>Not collected</td><td>❌ No</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">⚙️</span>
+        <h2>How We Use Data</h2>
+      </div>
+      <p>The event data you enter is used solely to:</p>
+      <ul>
+        <li>Display on your calendar screen and event list.</li>
+        <li>Calculate and display corresponding lunar calendar dates and Can Chi information.</li>
+        <li>Remind you of upcoming events (if notification functionality is enabled).</li>
+      </ul>
+      <p style="margin-top:12px">We do not use data for advertising, analytics, or any other commercial purpose.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🌐</span>
+        <h2>Device Permissions</h2>
+      </div>
+      <p>The App does <strong>not request</strong> sensitive permissions such as camera, microphone, contacts, GPS location, external storage, or SMS.</p>
+      <p style="margin-top:10px">The only permission that may be requested is <strong>Notifications</strong> — solely to send event reminders you have set. You can revoke this permission at any time in your device Settings.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🔗</span>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>The App <strong>does not integrate any advertising SDKs or third-party analytics services</strong> such as Firebase Analytics, Crashlytics, Facebook SDK, AdMob, or any other tracking service.</p>
+      <p style="margin-top:10px">The App operates entirely offline and does not send any network requests to external servers.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">👶</span>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>
+        <strong>Sổ Lịch Âm Việt</strong> is suitable for all ages and does not collect
+        personal information from anyone, including children under 13 years of age.
+        We fully comply with the Children's Online Privacy Protection Act (COPPA).
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">🗑️</span>
+        <h2>Data Deletion</h2>
+      </div>
+      <p>Since all data is stored locally on your device, you can delete it completely by:</p>
+      <ul>
+        <li>Deleting individual events within the App (swipe left to delete).</li>
+        <li>Going to <strong>Settings &gt; Apps &gt; Sổ Lịch Âm Việt &gt; Clear Data</strong> on your Android device.</li>
+        <li>Uninstalling the App — all data will be permanently deleted.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-icon">📝</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>
+        We may update this Privacy Policy from time to time.
+        Any changes will be posted on this page with a new effective date.
+        Continued use of the App after changes constitutes your acceptance of the new policy.
+      </p>
+      <p style="margin-top:10px;color:var(--muted);font-size:13px">
+        Effective date: <strong style="color:var(--gold-lt)">March 01, 2026</strong>
+      </p>
+    </div>
+
+    <div class="section contact-box">
+      <div class="section-header" style="justify-content:center">
+        <span class="section-icon">📧</span>
+        <h2>Contact Us</h2>
+      </div>
+      <p style="text-align:center">If you have any questions about this Privacy Policy, please contact us at:</p>
+      <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px;align-items:center">
+        <p>📍 &nbsp;TT03-15 Hai Dang City Project, Nguyen Co Thach Street,<br>My Dinh 2 Ward, Nam Tu Liem District, Hanoi, Vietnam</p>
+        <p>📞 &nbsp;<a href="tel:+84589212654">+84 589 212 654</a></p>
+        <p>📧 &nbsp;<a href="mailto:phucloc2010pl@gmail.com">phucloc2010pl@gmail.com</a></p>
+      </div>
+    </div>
+
+  </div><!-- /en-content -->
+
+</main>
+
+<footer>
+  &copy; 2026 Sổ Lịch Âm Việt &nbsp;·&nbsp; All rights reserved
+  &nbsp;·&nbsp; Privacy Policy v1.0
+</footer>
+
+<script>
+  function setLang(lang, btn) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
